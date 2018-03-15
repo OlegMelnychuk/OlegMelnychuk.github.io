@@ -72,7 +72,7 @@ button, input, a, textarea {
 
 /* Forms */
 .form {
-	&-input {
+	&-input, &-textarea {
 		font-size: 1.2rem;
 		display: block;
 		margin: 2rem 0;
@@ -544,6 +544,9 @@ section {
 	&-subtitle {
 		font-size: 2.2rem;
 	}
+	&-btn {
+		padding: 1rem 1.5rem;
+	}
 }
 
 /* Additional services */
@@ -565,6 +568,53 @@ section {
 		min-height: 30rem;
 		text-align: center;
 		color: @light;
+	}
+}
+
+/* Contacts */
+.contacts {
+	background: @light url(../img/contacts-bg.jpg) center no-repeat;
+	background-size: cover;
+	h2 {
+		font-size: 3rem;
+		.bold();
+	}
+	p {
+		font-size: 1.6rem;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	&-link {
+		display: inline-block;
+		color: @text;
+		border-bottom: 1px dotted @text;
+		&:hover {
+			color: darken(@text, 10%);
+		}
+	}
+	&-form {
+		h2 {
+			font-size: 1.9rem;
+			.reg();
+			margin-bottom: 3rem;
+		}
+	}
+}
+
+/* Footer */
+footer {
+	padding: 4rem 0;
+	.footer {
+		&-contacts {
+			padding-top: 0.5rem;
+			text-align: center;
+			p {
+				margin: 0;
+			}
+		}
+		&-dev-logo {
+			text-align: right;
+		}
 	}
 }
 
@@ -682,6 +732,24 @@ section {
 	.tour {
 		background: none;
 		background-color: @bg-light;
+	}
+	.contacts {
+		background: none;
+		background-color: @bg-light;
+		&-form {
+			margin-top: 3rem;
+		}
+	}
+	footer {
+		text-align: center;
+	}
+	.footer {
+		&-contacts {
+			margin: 2rem 0;
+		}
+		&-dev-logo {
+			text-align: center;
+		}
 	}
 }
 
